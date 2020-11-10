@@ -1,0 +1,51 @@
+1. To solve the problem of multiple records getting updated after discrepancies
+such as reset button or reload or back or otherwise, what can be done is that for
+now the record updation everywhere in 2/3 step processes uses regid/loginid and 
+uname/accno whereas it is sufficient to use regid/login and then now instead of 
+making 1 parameter less in prepare statement to get reid of overwork, what can
+be done is that it can be changed to success>1 or something like that because
+if reset or otherwise was the reason for the unsuccessful attempt then it would 
+have inserted the record with success=0 or success=1/2 for emailverifypages.
+
+2. Instead of adding just the datemodified/bendatemodified in bank, account and 
+beneficiary tables, instead add the loginid/regid of that last modification.
+Now this act can be presumed to lose the information of the actual date of modification  
+but it is in turn giving much more relevant data through log tables of each task.
+
+3. Comment for table beneficiary:
+	There can be many records having the pair of payeracc and benacc same but success=0 but there will always be one trio of payeracc, benacc, 
+	success=1/-1 i.e. just one time addition/deletion of a beneficiary i.e. just one unique record of this trio to fetch information.
+	Similar is the case for transaction and bank table. There might be multiple records in the both the aforementioned tables with 
+	all different kinds of success and approved/verified combinations but exactly 1 record with success=2 and approved =1 for bank table
+	and success=2 and trid for transaction table. 
+	Now there can be 3 possible cases where additions to this table will happen
+	1. The user tries to add the beneficiary. There can be 7 cases and they are:
+		1.1 the benacc number entered by the user is his own account number, by mistakenly typo of a digit or two or intentionally or otherwise.
+		1.2 the benacc number entered by the user does not exist in the bank.
+		1.3 the user tries to add the beneficiary but it already exists. Again two cases:
+			1.3.1 the beneficiary is approved as well.
+			1.3.2 the beneficiary is not approved.
+		1.4 the benacc number entered by the user is blocked.
+		1.5 User entered some partial/none information and pressed the reset button.
+		Same outcome for all the above. Result is that a record is inserted int the table with whatever/partial information is provided by the user and success=approved=0 and an appropriate message.
+		1.6 the user enters correct info and for the first time. Result is record inserted with all the information provided by the user and success=1 and approved=0 and an appropriate message.
+		1.7 the user tries to add the beneficiary second time after successfully adding it once before then it is added into this table but with success=0 as it is a failed attempt to add the 
+		beneficiary because the beneficiary already exists (the "once before" attempt would have added the record with success=1), ideally this act of addition of beneficiary twice should have
+		resulted in updation of dateadded column and no duplicate insertion of same information record but this would mean losing any previous data if the new data entered is changed even 
+		slightly from the previous one knowingly or otherwise. Result is record inserted with all the information provided by the user and success=approved=0 and an appropriate message.
+	2. The user goes to approve the beneficiary added. Now this ApproveBeneficiary page only fetches records with success=1 and approve=0. There are 2 cases that arise. They are:
+		2.1 Correct OTP entered. Success=1=approved
+		2.2 Incorrect OTP or any other thing resulting in unsuccessful approval. Success=1 approved=0.
+		Just updation of benmodified and these parameters. No new insertion for both 2.1 & 2.2 above
+	3. The user goes to delete the beneficiary added. Now this DeleteBeneficiary page only fetches records with success=1 and approve=0/1 both. There are 2 cases that arise. They are:
+		3.1 Correct OTP entered. Success=-1 approved=no change
+		3.2 Incorrect OTP or not confirmed or any other thing resulting in unsuccessful deletion. Success=1 approved=no change.
+		Just updation of benmodified and these parameters. No new insertion for both 3.1 & 3.2 above
+	Comment ends.
+4. The tables such as bank and beneficiary containing columns such as lastlogin, benapproved and benmodified contain the loginids and 
+and this loginid belongs to which table(i.e. logginginlog if login was unsuccessful or loggedinlog if login was successful)
+is represented by message column in same table itself. Also all these columns are useless at first sight because they always contain the most recent operation (no matter successful or unsuccessful)
+on that account number/beneficiary. But if one want then he can get all the history of that user by going back using the most recent id as the starting point in the appropriate tables.
+
+5. I am now entering several different types of records into tables not meant for that use like the bank table has a bankmodified column and it might contain loginid or regid depending on the use.
+	Like while updating balance or changing/forgot password/picture, it will contian loginid and similarly it should be obvious to identify which type of id it contains.

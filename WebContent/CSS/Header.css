@@ -1,0 +1,251 @@
+*{
+    margin:0;
+    padding:0; 
+    box-sizing: border-box; 
+}
+
+#one {
+    width: 100%;
+    height: 80px;
+    border: 2px black solid;
+/*     background-color: red; */
+}
+
+#onep1 {
+    float: left;
+    width: 18%;
+    height: 100%;
+/*     background-color: cyan; */
+}
+
+#onep1p1 {
+    width: auto;
+    max-height: 100%;
+}
+
+#onep2{
+    width:40%;
+    height:100%;
+    float: right;
+    /*position:relative;*/
+    /*left:100px;*/
+/*     background:blue; Arbitrary */
+}
+
+#onep2 .list1{
+    position: relative;
+    top: 13px;
+    z-index: 2;
+}
+#onep2 .list1 .list1p1{
+    background-color: #126532;
+    /*border:2px solid #368812;*/
+    border: 2px solid black;
+    border-radius: 25px;
+    width:calc(25% - 8px);
+    float:left;
+    list-style-type: none;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    /*position: relative;*/
+    cursor:col-resize;
+    margin:2px;
+    /*display: block;*/
+}
+
+#onep2 .list1 .list1p1 .list1p1p1{
+    /*display:block;*/
+    padding:3px 10px;
+    border-radius: 10px;
+    background-color: #6bad6d;
+    border:2px solid black;
+    text-decoration: none;
+    color:white;
+}
+
+#onep2 .list1 .list1p1 .list1p1p1 .img1{
+    width:10%;
+    padding: 0px 2px;
+    /*height:10%;
+    margin: 0px;*/
+    position: relative;
+    left: 2px;
+    top: 3px;
+    border:solid 2px black;
+}
+
+#onep2 .list1 .list1p1:hover .list1p1p1{
+    background-color: rgba(16,29,138,1);
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
+}
+#onep2 .list1 .list2{
+    position: relative;
+    left:20px;
+    /*display: none;*/
+    background-color: orange;
+}
+#onep2 .list1 .list2 .list2p1{
+    width:100%;
+    /*position: relative;*/
+    background-color: darkred;
+    display: none;
+    /*background-color: #126532;*/
+    /*border:2px solid #368812;*/
+    border: 2px solid black;
+    border-radius: 25px;
+    list-style-type: none;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    /*position: relative;*/
+    cursor:zoom-in;
+    margin:0.5px 0;
+    /*display: block;*/
+}
+#onep2 .list1 .list2 .list2p1 .list2p1p1{
+    /*display:block;*/
+    padding:3px 10px;
+    border-radius: 20px;
+    background-color: cyan;
+    border:2px solid black;
+    text-decoration: none;
+    color:white;
+}
+#onep2 .list1 .list2 .list2p1 .list2p1p1 .img2{
+    width:10%;
+    padding: 0px 2px;
+    /*height:10%;
+    margin: 0px;*/
+    position: relative;
+    left: 2px;
+    top: 5px;
+    border:solid 2px black;
+    height:15px;
+}
+
+#onep2 .list1 .list2 .list2p1:hover .list2p1p1{
+    background-color: rgba(100,40,50,1);
+    border-radius: 0px;
+    transition: all 0.5s ease-in-out;
+}
+
+/*#onep2 .list1 .list1p1 .list1p1p1:hover .list2 .list2p1{
+    display: block;
+    z-index:9999;
+}
+
+#onep2 .list1 .list1p1 .list1p1p1:hover .list2 .list2p1:nth-child(1){
+    animation: zoom 1000ms ease-out forwards;
+}
+#onep2 .list1 .list1p1 .list1p1p1:hover .list2 .list2p1:nth-child(2){
+    animation: zoom 1100ms  50ms ease-out forwards;
+}
+#onep2 .list1 .list1p1 .list1p1p1:hover .list2 .list2p1:nth-child(3){
+    animation: zoom 1200ms 100ms ease-out forwards;
+}
+#onep2 .list1 .list1p1 .list1p1p1:hover .list2 .list2p1:nth-child(4){
+    animation: zoom 1300ms 150ms ease-out forwards;
+}
+#onep2 .list1 .list1p1 .list1p1p1:hover .list2 .list2p1:nth-child(5){
+    animation: zoom 1400ms 200ms ease-out forwards;
+}*/
+
+#onep2 .list1 .list1p1:hover .list2 .list2p1{
+    display: block;
+    z-index:9999;
+}
+
+#onep2 .list1 .list1p1:hover .list2 .list2p1:nth-child(1){
+    animation: zoom 1000ms ease-out forwards;
+}
+#onep2 .list1 .list1p1:hover .list2 .list2p1:nth-child(2){
+    animation: zoom 1100ms  50ms ease-out forwards;
+}
+#onep2 .list1 .list1p1:hover .list2 .list2p1:nth-child(3){
+    animation: zoom 1200ms 100ms ease-out forwards;
+}
+#onep2 .list1 .list1p1:hover .list2 .list2p1:nth-child(4){
+    animation: zoom 1300ms 150ms ease-out forwards;
+}
+#onep2 .list1 .list1p1:hover .list2 .list2p1:nth-child(5){
+    animation: zoom 1400ms 200ms ease-out forwards;
+}
+
+@keyframes zoom{
+    0%{
+        opacity: 0;
+        transform: rotateY(-180deg) translateX(1px) translateY(-50px) translateZ(-40px) scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg) translateX(0px) translateY(0px) translateZ(0px) scale(1);
+    }
+}
+
+#onep2 .list1 .list2 .list3{
+    position: relative;
+    left:100%;
+    top: -100%;
+    /*display: none;*/
+    background-color: green;
+}
+#onep2 .list1 .list2 .list3 .list3p1{
+    width:100%;
+    /*position: relative;*/
+    background-color: darkred;
+    display: none;
+    /*background-color: #126532;*/
+    /*border:2px solid #368812;*/
+    border: 2px solid black;
+    border-radius: 25px;
+    list-style-type: none;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    /*position: relative;*/
+    cursor:zoom-in;
+    margin:0.5px 0;
+    /*display: block;*/
+}
+#onep2 .list1 .list2 .list3 .list3p1p1{
+    /*display:block;*/
+    padding:3px 10px;
+    border-radius: 20px;
+    background-color: cyan;
+    border:2px solid black;
+    text-decoration: none;
+    color:white;
+}
+#onep2 .list1 .list2 .list2p1:hover .list3 .list3p1{
+    display: block;
+    z-index:9999;
+}
+
+#onep2 .list1 .list2 .list2p1:hover .list3 .list3p1:nth-child(1){
+    animation: fade 1000ms ease-out forwards;
+}
+#onep2 .list1 .list2 .list2p1:hover .list3 .list3p1:nth-child(2){
+    animation: fade 1100ms  50ms ease-out forwards;
+}
+#onep2 .list1 .list2 .list2p1:hover .list3 .list3p1:nth-child(3){
+    animation: fade 1200ms 100ms ease-out forwards;
+}
+#onep2 .list1 .list2 .list2p1:hover .list3 .list3p1:nth-child(4){
+    animation: fade 1300ms 150ms ease-out forwards;
+}
+#onep2 .list1 .list2 .list2p1:hover .list3 .list3p1:nth-child(5){
+    animation: fade 1400ms 200ms ease-out forwards;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+        transform: translateZ(-100px) translateY(-50px) rotateZ(90deg) scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: translateZ(0px) translateY(0px) rotateZ(0deg) scale(1);
+    }
+}

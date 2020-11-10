@@ -1,0 +1,32 @@
+#fourp2p4 a{
+	cursor: pointer;
+}
+#fourp2p2 a{
+	cursor: pointer;
+}
+.five{
+	width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: none;
+    align-items: center;
+    text-align: center;
+    /* vertical-align: baseline; */
+    /* line-height: 140px; */
+}
+.five h1{
+	position: absolute;
+	top: 50%;
+	left: 45%;
+}
+.five img{
+	position: absolute;
+    width: 10%;
+    height: 20%;
+    top: 200px;
+    left: 50%;
+}

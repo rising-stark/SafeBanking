@@ -1,0 +1,12 @@
+.footer {
+	position: fixed;
+	height: 30px;
+	/* line-height:30px; */
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	border-top: 7px solid brown;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+	text-align: center;
+}

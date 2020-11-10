@@ -1,0 +1,78 @@
+.four {
+	position: relative;
+	width: 76%;
+	height: 500px;
+	left:22%;
+	top:5px;
+	color: white;
+	font-family: 'Merriweather', serif;
+	/* border-radius: 20px; */
+	font-size: 15px;
+}
+
+.four .fourc1{
+	position: absolute;
+	left: 20%;
+	width: 50%;
+	height:40px;
+	background-color: rgba(10,10,15,0.4);
+	line-height:40px;
+	text-align:center;
+	border-radius: 20px;
+	padding: 2px 10px;
+}
+
+.four .fourc2{
+	position: absolute;
+	width: 100%;
+	top: 42px;
+	/* background-color: rgba(100,100,15,0.8); */
+	border: 2px solid #595a3a;
+	overflow:hidden;
+	border-radius: 20px;
+	padding-bottom: 20px;
+}
+
+.four .fourc2 table{
+	position: relative;
+	top: 20px;
+	width: 100%;
+	font-family: 'Merriweather', serif;
+	/* border: 1px solid #111; */
+	border-collapse: collapse;
+	table-layout:fixed;
+}
+
+.four .fourc2 table tr{
+	height:40px;
+	border-bottom: 1px solid #432121;
+}
+.four .fourc2 table tr th{
+	/* border: 2px solid #ddddee; */
+	text-align: center;
+	weight: 200;
+	font-size: 16.5px;
+	rowspan: 2;
+	height: 40px;
+}
+.four .fourc2 table tr td{
+	/* border: 2px solid #ddddee; */
+	position: relative;
+	text-align: center;
+	padding: 2px;
+}
+.four .fourc2 table .credit{
+	color: darkgreen;
+	background-color:#8ef372;
+}
+.four .fourc2 table .debit{
+	color: darkred;
+	background-color:#ff4a4a;
+}
+.four .fourc2 h2{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	padding: 10px 10px;
+}

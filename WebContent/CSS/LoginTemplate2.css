@@ -1,0 +1,76 @@
+.four {
+	border-radius: 5px;
+/* 	background-color: rgba(136, 81, 18, 0.5); */
+	background-image: url('../img/2.jpg');
+	background-size: cover;
+	width:82%;
+	height: 500px;
+	float:left;
+	position: relative;
+}
+
+.fourc1{
+	width: 100%;
+/* 	position :absolute; */
+	background-color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.fourc1 h2{
+	font-size: 20px; 
+	padding-left: 20px;
+	height: 40px;
+	line-height: 40px;
+	font-family: 'Merriweather', serif;
+	color: white;
+}
+
+.fourc2 {
+	width: 100%;
+	height: 440px;
+/* 	background-image: url("D:\Images\RDJ(1).jpg"); */
+/* 	background-color: lightbrown; */
+}
+
+.fourc2c1{
+	float: left;
+	width: 45%;
+	height: 150px;
+	text-align: center;
+	line-height: 150px;/* 
+	border-right: 1px solid black;
+	border-bottom: 1px solid black; */
+  	margin: 15px 10px;
+}
+
+.fourc2 .fourc2c1 a {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	font-size: 30px;
+	color: white;
+   width: 80%;
+   height: 80%;
+	/* -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+   height: 50%: */
+   box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  transition: 0.2s ease-in;
+}
+.fourc2 .fourc2c1 a:hover{
+	width: 85%;
+	height: 95%;
+	border-radius: 25px;
+	background: rgba(0, 90, 0, 0.8);
+	weight: 200;
+	font-size: 35px;
+}

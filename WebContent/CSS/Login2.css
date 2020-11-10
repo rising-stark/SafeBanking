@@ -1,0 +1,393 @@
+.icon-bars {
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	overflow: auto;
+	height: 40px;
+	padding-top: 5px;
+}
+.two {
+	position: relative;
+    width: 50%;
+    background-color: rgba(10,10,15,0.5);
+    height: 520px;
+    position: relative;
+    left: 25%;
+    top: 20px;
+    color: white;
+    font-family: 'Merriweather', serif;
+    border-radius: 20px;
+}
+
+.two .twop1{
+	position: absolute;
+	width: 100%;
+	height:50px;
+	background-color: rgba(10,10,15,0.8);
+	line-height:50px;
+	text-align:center;
+	border-radius: 20px;
+}
+
+.two .twop2{
+	position: absolute;
+	width: 100%;
+	height:calc(100% - 65px);
+	top: 65px;
+	/* background-color: rgba(100,100,15,0.8); */
+	/* border: 2px solid #111; */
+	overflow:hidden;
+}
+
+.two .twop2 h4{
+	position: absolute;
+	width: calc(100% - 20px);
+	top: 0px;
+	left: 20px;
+	height:55px;
+}
+
+.two .twop2 table{
+	width: calc(100% - 75px);
+	position: absolute;
+	height:calc(100% - 75px);
+	top: 75px;
+	left: 75px;
+	/* border: 1px solid #111; */
+	border-collapse: collapse;
+	table-layout:fixed;
+	overflow:hidden;
+}
+
+.two .twop2 table tr{
+	position: relative;
+	height: 10px;
+	/* border: 1px solid #111eee; */
+}
+
+.two .twop2 table #link td{
+	text-align: center;
+	font-size: 18px;
+	/* border: 1px solid #111eee; */
+}
+
+.two .twop2 table tr td img{
+	width: 30px;
+	height: 30px;
+}
+
+.two .twop2 table tr td{
+	/* border: 2px solid #ddddee; */
+	text-align: left;
+	padding: 8px;
+}
+.two .twop2 table tr td input{
+	width:100%;
+	height:35px;
+	font-family: sans-serif;
+}
+
+.two .twop2 table #chooseRow{
+	display: block;
+	position: relative;
+	width: 200%;
+	height: 140px;
+	border-radius: 2px;
+}
+
+.two .twop2 table #chooseRow td:nth-child(1){
+	display: block;
+	line-height: 125px;
+	text-align: left;
+}
+
+.two .twop2 table #chooseRow td:nth-child(2){
+	display: block;
+	position: absolute;
+	left: 320px;
+	top: 0px;
+	width: 150px;
+	height: 135px;
+	border: 2px dotted white;
+	border-radius: 10px;
+	color: black;
+	line-height: 125px;
+	text-align: center;
+	background: rgba(251,251,251,0.7);
+	cusrsor: pointer;
+}
+.two .twop2 table #chooseRow td:nth-child(2) #chooseradio{
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 20px;
+	height: auto;
+	z-index:1;
+}
+
+.two .twop2 table #chooseRow td:nth-child(2) img{
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	border-radius: 10px;
+}
+
+.two .twop2 table tr td input[type=text]{
+	padding-left:5px;
+}
+.two .twop2 table tr td input[type=password]{
+	padding-left:5px;
+}
+.two .twop2 table tr td input[type=button]{
+	width:40%;
+	height:35px;
+	position:relative;
+	left:30%;
+	background-color:seagreen;
+	transition: 0.1s ease-in;
+}
+
+.two .twop2 table tr td input[type=submit]{
+	background-color: #ff8080;
+	width:40%;
+	height:35px;
+	position:relative;
+	left:30%;
+	transition: 0.1s ease-in;
+}
+
+.two .twop2 table tr td .grow:hover{
+	box-shadow:5px 3px 10px 2px #1baf4b;
+	background-color:#266549;
+	transform:scale(1.05,1);
+    -webkit-transform:scale(1.01,1);
+    -moz-transform:scale(1.05,1);
+}
+#three{
+	position: absolute;
+	left: 10%;
+	top: 130px;
+	width: 85%;
+	height: 540px;
+	z-index: 2;
+	color: white;
+	/* display: none; */
+	background:rgba(10,10,10,0.85);
+}
+#three h2{
+	position: absolute;
+	top: 10px;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+#three #cancel{
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	width: 2%;
+	height: 1px;
+	line-height: 20px;
+	text-align: right;
+	cursor: pointer;
+}
+#three #code{
+	top:40px;
+	
+}
+#three #code span{
+	weight: 200;
+	text-decoration:underline;
+	color:#ffa500e3;
+}
+#three #threep1{
+	position: absolute;
+	left: 0;
+	top: 80px;
+	width: 100%;
+	height: calc(100% - 90px);
+	overflow: auto;
+	/* display:none; */
+}
+
+#three #threep1 .threep1c1{
+	position: relative;
+	left: 40px;
+	top: 10px;
+	width: 350px;
+	height: 350px;
+	float:left;
+	margin: 10px 30px;
+	border:5px white solid;
+	box-shadow: 5px 5px 15px 4px #eee;
+}
+
+#three #threep1 .threep1c1 input[type=radio]{
+	position:absolute;
+	z-index: 3;
+}
+#three #threep1 .threep1c1 img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+#three #threep2{
+	position: absolute;
+	left: 0;
+	top: 80px;
+	width: 100%;
+	height: calc(100% - 90px);
+	overflow: auto;
+	display:none;
+}
+
+#three #threep2 .threep2c1{
+	position: relative;
+	left: 40px;
+	top: 10px;
+	width: 350px;
+	height: 350px;
+	float:left;
+	margin: 10px 30px;
+	border:5px white solid;
+	box-shadow: 5px 5px 15px 4px #eee;
+}
+
+#three #threep2 .threep2c1 input[type=radio]{
+	position:absolute;
+	z-index: 3;
+}
+#three #threep2 .threep2c1 img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+#three #threep3{
+	position: absolute;
+	left: 0;
+	top: 80px;
+	width: 100%;
+	height: calc(100% - 90px);
+	overflow: auto;
+	display:none;
+}
+
+#three #threep3 .threep3c1{
+	position: relative;
+	left: 40px;
+	top: 10px;
+	width: 350px;
+	height: 350px;
+	float:left;
+	margin: 10px 30px;
+	border:5px white solid;
+	box-shadow: 5px 5px 15px 4px #eee;
+}
+
+#three #threep3 .threep3c1 input[type=radio]{
+	position:absolute;
+	z-index: 3;
+}
+#three #threep3 .threep3c1 img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+#three #threep4{
+	position: absolute;
+	left: 0;
+	top: 80px;
+	width: 100%;
+	height: calc(100% - 90px);
+	overflow: auto;
+	display:none;
+}
+
+#three #threep4 .threep4c1{
+	position: relative;
+	left: 40px;
+	top: 10px;
+	width: 350px;
+	height: 350px;
+	float:left;
+	margin: 10px 30px;
+	border:5px white solid;
+	box-shadow: 5px 5px 15px 4px #eee;
+}
+
+#three #threep4 .threep4c1 input[type=radio]{
+	position:absolute;
+	z-index: 3;
+}
+#three #threep4 .threep4c1 img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+#three #threep5{
+	position: absolute;
+	top: calc(100% - 70px);
+	left: 43%;
+	height: 50px;
+    line-height: 50px;
+    width: 14%;
+    color: black;
+    background-color: #b7ffff;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.2s linear;
+}
+#three #threep5:hover{
+	box-shadow: 5px 5px 5px 2px #b7ffff;
+	transform:scale(1.03,1.03);
+    -webkit-transform:scale(1.03,1.03);
+    -moz-transform:scale(1.03,1.03);
+}
+#three #threep5 img{
+	width: 50px;
+	height: 50px;
+}
+#three #threep5 #threep5p1{
+	position: absolute;
+	top: 0px;
+	left: 60px;
+	height: 50px;
+    line-height: 50px;
+    width: calc(20% - 50px);
+}
+.afterPic{
+	display: none;
+}
+#link a{
+	text-decoration: none;
+	color: white;
+}
+.four{
+	width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: none;
+    align-items: center;
+    text-align: center;
+    /* vertical-align: baseline; */
+    /* line-height: 140px; */
+}
+.four h1{
+	position: absolute;
+	top: 50%;
+	left: 45%;
+}
+.four img{
+	position: absolute;
+    width: 17%;
+    height: 25%;
+    top: 300px;
+    left: 40%;
+}

@@ -1,0 +1,343 @@
+.two {
+	width: 100%;
+	background-color: #555;
+	height: 130px;
+}
+
+.two .twoc1{
+	width: 100%;
+	height:100px;
+}
+
+.two .twoc1 .twoc1c1 {
+	display:block;
+	float: left;
+	width: 25%;
+	height:100px;
+	text-align: center;
+	line-height: 100px;
+	transition: all 0.3s ease;
+	background-color: #9ea8ddb3;
+	text-decoration: none;
+	color: white;
+	font-size: 25px;
+	border-right: 2px solid black;
+}
+
+.two .twoc1 .twoc1c1:hover {
+	background-color: #000;
+}
+
+.two .twoc1 .active {
+	background-color: brown !important;
+}
+
+.two .twoc2{
+	position: relative;
+	color: white;
+	font-size: 20px;
+	width: 100%;
+	height:30px;
+}
+.two .twoc2 #twoc2p1{
+	position: absolute;
+	left: 20px;
+	line-height: 30px;
+}
+.two #twoc2p2{
+    position: absolute;
+    width: auto;
+    padding: 0 50px;
+    height: 25px;
+    line-height: 25px;
+    right: 50px;
+    top: 10%;
+    color: black;
+    text-align: left;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(255,255,255,0.5);
+    cursor: pointer;
+    outline: none;
+    z-index: 10;
+}
+
+.two #twoc2p2::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #4cbeff transparent;
+}
+
+.two #twoc2p2 .dropdown {
+    /* Size & position */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    /* Styles */
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-top: none;
+    border-bottom: none;
+    list-style: none;
+
+    /* Hiding */
+    display: none;
+    overflow: hidden;
+}
+
+.two #twoc2p2 .dropdown li {
+    padding: 0 10px ;
+}
+
+.two #twoc2p2 .dropdown li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 10px;
+    border-bottom: 1px solid #e6e8ea;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.two #twoc2p2 .dropdown li:last-of-type a {
+    border: none;
+}
+
+.two #twoc2p2 .dropdown li i {
+    margin-right: 5px;
+    color: red;
+    padding: 0px 10px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+/* Hover state */
+
+.two #twoc2p2 .dropdown li:hover a {
+    color: #57a9d9;
+}
+
+.two #twoc2p2 .active {
+    border-radius: 5px 5px 0 0;
+    box-shadow: none;
+    border-bottom: none;
+    color: white;
+}
+
+.two #twoc2p2 .active::after {
+    border-color: #82d1ff transparent;
+}
+
+.two #twoc2p2 .active {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    max-height: 400px;
+}
+
+.three {
+	width: 18%;
+	height: 510px;
+	background-color: black;
+	float: left;
+}
+
+.three .threec1{
+/* 	width: 100%; */
+/* 	height: 50%; */
+	list-style-type: none;
+}
+
+.three .threec1 li {
+	background-color: rgba(84,45,22,1);
+/* 	display:block; */
+	width:100%;
+	height: 40px;
+	line-height: 40px;
+	text-align:center;
+	color: white;
+	border-bottom: 1px solid rgba(100, 100, 100,1);
+}
+
+.three .threec1 li:nth-child(1){
+	background-color: #c0403d;
+	height:50px;
+	color: white;
+	font-size: 25px;
+	weight: 300;
+	cursor: pointer;
+}
+.three .threec1 li a{
+	display: block;
+	width: 100%;
+	height: auto;
+	text-decoration:none;
+	/* color: #e2b3ee; */
+	color: white;
+	transition: 0.2s ease-in;
+}
+#codefold a{
+	text-decoration: underline;
+	color: white;
+	display: inline;
+}
+#codefoldp1{
+	display: none;
+}
+.three .threec1 .threep1c1:hover a{
+	font-size: 22px;
+}
+.three #threep1 .threep1c1::before{
+	content: "";
+    position: absolute;
+    background-color: #ff8000;
+    opacity: 0.7;
+    width: 20%;
+    display: block;
+    height: 40px;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+    transform-origin: left;
+    pointer-events: none;
+}
+
+.three #threep1 .threep1c1:hover::before{
+	transform: scaleX(1);
+}
+.five{
+	width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: none;
+    align-items: center;
+    text-align: center;
+    /* vertical-align: baseline; */
+    /* line-height: 140px; */
+}
+.five h1{
+	position: absolute;
+	top: 50%;
+	left: 45%;
+}
+.five img{
+	position: absolute;
+    width: 10%;
+    height: 20%;
+    top: 200px;
+    left: 50%;
+}
+.six {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 100%;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.six #sixp1 {
+    width: 30%;
+    position: absolute;
+    top: 32%;
+    left: 36%;
+    height: 240px;
+    /* margin: 18% 36%; */
+    z-index: 21;
+    background-color: #9df9a4;
+    /* padding: 14px; */
+    display: none;
+    border: 4px solid #008000;
+    border-radius: 30px;
+}
+.six #sixp2 {
+    width: 30%;
+    position: absolute;
+    top: 32%;
+    left: 36%;
+    height: 240px;
+    /* margin: 18% 36%; */
+    z-index: 21;
+    background-color: #ff6262;
+    /* padding: 14px; */
+    display: none;
+    border: 4px solid #7d021b;
+    border-radius: 30px;
+}
+.six #sixp3 {
+    width: 30%;
+    position: absolute;
+    top: 32%;
+    left: 36%;
+    height: 240px;
+    /* margin: 18% 36%; */
+    z-index: 21;
+    background-color: #9df9a4;
+    /* padding: 14px; */
+    display: none;
+    border: 4px solid #008000;
+    border-radius: 30px;
+}
+#sixp1 h2 {
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    padding: 5px;
+}
+#sixp2 h2 {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    padding: 5px;
+}
+#sixp3 h2 {
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    padding: 5px;
+}
+#sixp1 #sixp1p1 {
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    top: 90px;
+    left: 35%;
+    cursor:pointer;
+    /*box-shadow: 7px 10px 35px 4px #fff;
+    border:5px white solid;
+    border-radius: 50%;*/
+}
+#sixp2 #sixp2p1 {
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    top: 10px;
+    left: 35%;
+    cursor:pointer;
+    /*box-shadow: 7px 10px 35px 4px #fff;
+    border:5px white solid;
+    border-radius: 50%;*/
+}
+#sixp3 #sixp3p1 {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    top: 60px;
+    left: 20%;
+    cursor:pointer;
+    /*box-shadow: 7px 10px 35px 4px #fff;
+    border:5px white solid;
+    border-radius: 50%;*/
+}

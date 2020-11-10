@@ -1,0 +1,126 @@
+.four {
+	position: relative;
+	width: 50%;
+	height: 505px;
+	left:35%;
+	top:5px;
+	color: white;
+	font-family: 'Merriweather', serif;
+	border-radius: 20px;
+	font-size: 18px;
+}
+
+.four .fourc1{
+	position: absolute;
+	left: 10%;
+	width: 80%;
+	height:50px;
+	background-color: rgba(10,10,15,0.2);
+	line-height:50px;
+	text-align:center;
+	border-radius: 20px;
+}
+
+.four .fourc2{
+	position: absolute;
+	width: 100%;
+	height:calc(100% - 105px);
+	top: 55px;
+	/* background-color: rgba(100,100,15,0.8); */
+	border: 2px solid rgba(72,36,36,0.8);
+	overflow:hidden;
+	border-radius: 20px;
+}
+
+.four .fourc2 table{
+	width: 100%;
+	position: absolute;
+	height:200px;
+	top: 0px;
+	left: 0px;
+	border: 1px solid #111;
+	border-collapse: collapse;
+	table-layout:fixed;
+	overflow:hidden;
+	border: 2px black;
+}
+
+.four .fourc2 table tr{
+	position: relative;
+	/* border: 1px solid #111eee; */
+}
+
+.four .fourc2 table tr:nth-child(even) {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.four .fourc2 table td{
+	/* border: 2px solid #ddddee; */
+	text-align: left;
+	padding: 8px;
+}
+.four .fourc2 table tr td input[type=text]{
+	width:80%;
+	height:35px;
+	font-family: sans-serif;
+	padding-left:5px;
+}
+.four .fourc2 table #checkbox td{
+	position: relative;
+	width: 100%;
+	height: 20px;
+	font-size: 15px;
+	color: black;
+	padding-left: 8%;
+}
+.four .fourc2 table #checkbox td input[type=checkbox]{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 20px;
+}
+.four .fourc2 table tr td input[type=submit]{
+	position: relative;
+    top: 0px;
+    width: auto;
+    padding: 10px 20px;
+    height: 40px;
+    line-height: 20px;
+    left: -15%;
+    transition: 0.1s ease-in;
+    vertical-align: middle;
+}
+
+.four .fourc2 table tr td .grow{
+	position: relative;
+    top: 0px;
+    width: auto;
+    padding: 10px 20px;
+    height: 40px;
+    line-height: 20px;
+    left: 18%;
+    transition: 0.1s ease-in;
+    vertical-align: middle;
+}
+
+.four .fourc2 table tr td .grow:hover{
+	box-shadow:5px 3px 8px 2px #1baf4b;
+	background-color:#266549;
+	transform:scale(1.05,1);
+	border: 2px solid #004800;
+    -webkit-transform:scale(1.05,1);
+    -moz-transform:scale(1.05,1);
+}
+.four .fourc2 table tr td #btnCANCEL{
+	background-color:#ef0303;
+	border: 0;
+	left: 16%;
+}
+
+.four .fourc2 table tr td #btnCANCEL:hover{
+	box-shadow:5px 3px 10px 2px #cf9e9e;
+	background-color:#cc3104;
+	transform:scale(1.05,1);
+    -webkit-transform:scale(1.05,1);
+    -moz-transform:scale(1.05,1);
+    border: 2px solid darkred;
+}

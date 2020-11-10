@@ -1,0 +1,119 @@
+.four {
+	position: relative;
+	width: 75%;
+	height: 320px;
+	left:20%;
+	top:20px;
+	color: white;
+	font-family: 'Merriweather', serif;
+	border-radius: 20px;
+	border: 5px solid #432121;
+	font-size: 18px;
+}
+
+.four .fourc1{
+	position: absolute;
+	left: 5%;
+	top: 0;
+	width: 90%;
+	height:45px;
+	background-color: #242424;
+	text-align: center;
+	border-radius: 25px;
+	padding: 0px 10px;
+	border-bottom: 5px solid #432121;
+}
+.four .fourc1 #email{
+	weight: 200;
+	font-size: 22px;
+	text-decoration: underline;
+	/* background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; */
+	color: seagreen;/* 
+	background-color: #fff; */
+}
+.four .fourc1 h4{
+	padding: 5px 0px;
+	line-height:30px;
+	border-radius: 20px 20px 0 0;
+}
+
+.four .fourc2{
+	position: absolute;
+	width: 100%;
+	height:calc(100% - 35px);
+	top: 35px;
+	/* background-color: rgba(100,100,15,0.8); */
+	/* border: 2px solid rgba(72,36,36,0.8); */
+	/* overflow:hidden;
+	border-radius: 20px; */
+}
+
+.four .fourc2 #fourc2p1{
+	position: absolute;
+	width: 55%;
+	height: 90%;
+	top: 8%;
+	left: 10px;
+	border-collapse: collapse;
+	border-right: 2px solid black;
+}
+.four .fourc2 #fourc2p2{
+	position: absolute;
+	width: 40%;
+	height: 45%;
+	top: 30%;
+	left: 60%;
+}
+
+.four .fourc2 table tr{
+	height:40px;
+	border-bottom: 1px solid #432121;
+}
+.four .fourc2 table tr:last-child{
+	border-bottom: 0;
+}
+
+/* .four .fourc2 #fourc2p1 tr:nth-child(even) {
+	background-color: rgba(0, 0, 0, 0.3);
+} */
+.four .fourc2 table tr td{
+	/* border: 2px solid #ddddee; */
+	text-align: left;
+	/* padding: 8px; */
+}
+.four .fourc2 table tr td input{
+	width:90%;
+	height:35px;
+	font-family: sans-serif;
+	padding-left:5px;
+}
+
+.four .fourc2 table tr td input[type=text]{
+	padding: 2px 8px;
+}
+.four .fourc2 table tr td input[type=button]{
+	width:40%;
+	height:35px;
+	position:relative;
+	top: 40px;
+	left: 25%;
+	color: black;
+	background-color:#e3e3e3;
+	transition: 0.1s ease-in;
+}
+.four .fourc2 table tr td .grow{
+	background-color:rgba(0,200,0,0.4) !important;
+	transform:scale(1.05,1);
+    -webkit-transform:scale(1.01,1);
+    -moz-transform:scale(1.05,1);
+}
+
+.four .fourc2 table tr td .grow:hover{
+	box-shadow:5px 3px 10px 2px #1baf4b;
+	background-color:#266549;
+	transform:scale(1.05,1);
+    -webkit-transform:scale(1.01,1);
+    -moz-transform:scale(1.05,1);
+}

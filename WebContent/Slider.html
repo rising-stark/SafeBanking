@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="JS/jquery.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: content-box;
+		}
+		#two{
+			position: relative;
+			display: inline-block;
+			top:80px;
+			left:50%;
+			background:blue;
+			width:50%;
+			height: 450px;
+			/*overflow: hidden;*/
+			border:10px white solid;
+			box-shadow: 5px 5px 15px gray;
+		}
+		#two #twop1{
+			position: absolute;
+			left: 0px;
+			top: 0;
+			width: 400%;
+			height: 50px;
+		}
+		#two #twop2{
+			position: absolute;
+			left: 0px;
+			top: 50px;
+			width: 400%;
+			height: 400px;
+		}
+		#two #twop2 .twop2c1{
+			position: relative;
+			float: left;
+			width:25%;
+			height: 400px;
+			transition:0.5s ease-out;
+		}
+		#two #twop2 .twop2c1 .twop2c1c1{
+			width:50%;
+			float: left;
+			height: 200px;
+			background: pink;
+		}
+		#two #twop2 .twop2c1 .twop2c1c1 img{
+			width:100%;
+			float: left;
+			height: 100%;
+		}
+		#two .fa-arrow-circle-right{
+			position: absolute;
+			z-index: 5;
+			top: calc(50% - 25px);
+			right: 0%;
+			font-size: 50px;
+			color: green;
+		}
+		#two .fa-arrow-circle-left{
+			position: absolute;
+			z-index: 5;
+			top: calc(50% - 25px);
+			left: 0%;
+			font-size: 50px;
+			color: green;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var left,right,sum;
+			left=0;right=3;sum=3;
+			setInterval(Check, 0);
+			function Check(){
+				if(left==0)
+					$(".fa-arrow-circle-left").css("color", "grey");
+				else
+					$(".fa-arrow-circle-left").css("color", "green");
+				if(right==0)
+					$(".fa-arrow-circle-right").css("color", "grey");
+				else
+					$(".fa-arrow-circle-right").css("color", "green");
+			}
+
+			$(".fa-arrow-circle-right").click(function(){
+				if(right!=0){
+					right=right-1;
+					left=left+1;
+					console.log("In Right ="+right+" Left="+left);
+					$('#twop2').css({"left": "calc(-100% * "+left+")"});
+				}
+			});
+			$(".fa-arrow-circle-left").click(function(){
+				if(left!=0){
+					left=left-1;
+					right=right+1;
+					console.log("Right ="+right+" In Left="+(4 - left));
+					$('#twop2').css({"left": "calc(-100% * "+left+")"});
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="two">
+		<i class="fa fa-arrow-circle-left"></i>
+		<div id="twop1">
+			<h2>SELECT A PICTURE(KEY):</h2>
+		</div>
+		<div id="twop2">	
+			<div class="twop2c1">
+				<div class="twop2c1c1">
+					<img id="imgp1" src="1.jpg"  alt="Im">
+				</div>
+				<div class="twop2c1c1">
+					<img src="2.jpg">
+				</div>
+				<div class="twop2c1c1">
+					<img src="3.jpg">
+				</div>
+				<div class="twop2c1c1">
+					<img src="4.jpg">
+				</div>
+			</div>
+			<div class="twop2c1">
+				<div class="twop2c1c1">
+					<img src="1.jpg">
+				</div>
+				<div class="twop2c1c1">
+					<img src="2.jpg">
+				</div>
+				<div class="twop2c1c1">
+					<img src="3.jpg">
+				</div>
+				<div class="twop2c1c1">
+					<img src="4.jpg">
+				</div>
+			</div>
+			<div class="twop2c1">
+				<div class="twop2c1c1">
+					<img src="1.jpg">
+				</div>
+				<div class="twop2c1c1">
+					<img src="2.jpg">
+				</div>
+				<div class="twop2c1c1">
+					<img src="3.jpg">
+				</div>
+				<div class="twop2c1c1">
+					<img src="4.jpg">
+				</div>
+			</div>
+			<div class="twop2c1" id="twop2p4">
+				<div class="twop2c1c1">
+					<img src="1.jpg">
+				</div>
+				<div class="twop2c1c1">
+					<img src="2.jpg">
+				</div>
+				<div class="twop2c1c1">
+					<img src="3.jpg">
+				</div>
+				<div class="twop2c1c1">
+					<img src="4.jpg">
+				</div>
+			</div>
+		</div>
+		<i class="fa fa-arrow-circle-right"></i>
+	</div>
+</body>
+</html>
